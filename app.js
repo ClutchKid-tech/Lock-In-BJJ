@@ -77,8 +77,20 @@ function showScreen(name) {
 }
 
 $$('.nav-btn').forEach(btn => {
-  btn.addEventListener('click', () => showScreen(btn.dataset.screen));
+  if (btn.dataset.screen) {
+    btn.addEventListener('click', () => showScreen(btn.dataset.screen));
+  }
 });
+
+// Center nav log button
+const navLogBtn = document.getElementById('nav-log-btn');
+if (navLogBtn) {
+  navLogBtn.addEventListener('click', () => {
+    resetLogForm();
+    showScreen('log');
+    $$('.nav-btn').forEach(b => b.classList.remove('active'));
+  });
+}
 
 // ── Dashboard ──
 function calcStreak() {
@@ -109,6 +121,16 @@ function getNextComp() {
 }
 
 function renderDashboard() {
+  // Date header
+  const dateEl = $('#dash-date-label');
+  if (dateEl) {
+    const now = new Date();
+    const dayName = now.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
+    const day = now.getDate();
+    const month = now.toLocaleDateString('en-US', { month: 'long' }).toUpperCase();
+    dateEl.textContent = `${dayName}, ${day} ${month}`;
+  }
+
   const streak = calcStreak();
   $('#streak-count').textContent = streak;
   $('#streak-flame').textContent = streak > 0 ? '🔥' : '';
@@ -118,7 +140,8 @@ function renderDashboard() {
   if (nextComp) {
     compEl.classList.remove('hidden');
     $('#dash-comp-days').textContent = daysUntil(nextComp.date);
-    $('.countdown-label').textContent = nextComp.name;
+    const nameEl = $('#dash-comp-name');
+    if (nameEl) nameEl.textContent = nextComp.name;
   } else {
     compEl.classList.add('hidden');
   }
