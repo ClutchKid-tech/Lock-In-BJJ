@@ -38,6 +38,9 @@
 .rank-stat-num {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.8rem; font-weight: 700; color: var(--text); line-height: 1;
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 .rank-stat-label {
   font-size: 0.58rem; font-weight: 600;
@@ -213,6 +216,9 @@
 #timer-display {
   font-family: 'DM Sans', sans-serif;
   font-size: 2.6rem; font-weight: 700; color: var(--text); line-height: 1;
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 
 .timer-actions { display: flex; gap: 8px; margin-bottom: 8px; }
@@ -284,6 +290,9 @@
 .my-rank-num {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem; font-weight: 700; color: var(--text); line-height: 1;
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 .my-rank-label {
   font-size: 0.55rem; font-weight: 600;
@@ -347,6 +356,9 @@
 .lb-streak-num {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.4rem; font-weight: 700; color: var(--text); display: block; line-height: 1;
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 .lb-streak-label { font-size: 0.55rem; color: var(--text2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 

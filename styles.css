@@ -134,6 +134,9 @@ body {
   font-weight: 700;
   line-height: 1;
   color: var(--text);
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 .streak-label {
   font-size: 0.65rem;
@@ -161,6 +164,9 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 2.8rem; font-weight: 700;
   color: var(--text); line-height: 1;
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 .countdown-unit {
   font-size: 0.65rem; font-weight: 600;
@@ -388,6 +394,9 @@ h2 { margin-bottom: 10px; }
   font-family: 'DM Sans', sans-serif;
   font-size: 1.8rem; font-weight: 700;
   color: var(--text); line-height: 1;
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 .stat-label {
   font-size: 0.6rem; font-weight: 600;
@@ -438,6 +447,9 @@ h2 { margin-bottom: 10px; }
   font-family: 'DM Sans', sans-serif;
   font-size: 2rem; font-weight: 700;
   color: var(--text); line-height: 1; text-align: right;
+  font-variant-numeric: normal;
+  font-feature-settings: 'zero' 0;
+  font-variant-ligatures: none;
 }
 .comp-card-countdown small {
   font-size: 0.6rem; font-weight: 600;
